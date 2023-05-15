@@ -35,37 +35,33 @@ crearDeck();
 
 // Esta funcion me permitira tomar una carta
 
-// const pedirCarta = () => {
+const pedirCarta = () => {
 
-//     if ( deck.length === 0){
-//         throw 'No hay cartas en el deck!';
-//     }
+    if ( deck.length === 0){
+        throw 'No hay cartas en el deck!';
+    }
 
-//     const carta = deck.pop();
+    const carta = deck.pop();
     
-//     console.log( deck );
-//     console.log( carta );
-//     return carta;
+    console.log( deck );
+    console.log( carta );
+    return carta;
 
-// }
+}
 
 
 // pedirCarta();
 
-// // Esta funcion me dara el valor de la carta
+// Esta funcion me dara el valor de la carta
 
-// const valorCarta = ( carta ) => {
-//     const valor = carta.substring (0, carta.length - 1);
-//      return ( isNaN( valor ) ) ?
-//      ( valor === 'A') ? 11 : 10
-//      : valor * 1;
+const valorCarta = ( carta ) => {
+    
 
 
-// }              
+}              
 
 
-//  const valor = valorCarta( pedirCarta() )
-//  console.log({ valor })
+valorCarta('2D')
 
 
 
