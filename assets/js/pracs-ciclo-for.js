@@ -1,52 +1,60 @@
 
-console.warn('Practica Ciclo For')
 
-// Poner cada curso de un colegio en un ciclo for
+   
 
-let baraja = [];
-const palo =  ['T', 'D', 'P','C']
-const gradosEspeciales = ['A', 'J', 'Q', 'K']
+let deck     = [];
+const tipos  = ['C','D','H','S']
+const especiales = ['A','J','Q','K']
 
 
-const creandoBaraja =  () => {
+// Esta funcion crea una nueva baraja
 
-    for( let i = 2; i <= 10; i++){
-        for(  let pal of palo ){
-            baraja.push( i + pal)
+const crearDeck = () => {
+
+    for(let i = 2 ; i <= 10; i++ ){
+        for( tipo of tipos ){
+            deck.push( i + tipo)
         }
     }
 
-    for( let esp of gradosEspeciales){
-        for( let pal of palo){
-            baraja.push( esp + pal )
+    for( let tipo of tipos){
+        for(let esp of especiales){
+            deck.push( tipo + esp)
         }
     }
 
 
-    console.log( baraja )
+    deck = _.shuffle( deck )
+    console.log( deck )
+    return deck;
 
-}
-
-creandoBaraja();
-
-const sacarCartas = () => {
-
-    if( baraja.length === 0){
-        throw 'No hay mas Cartas en la baraja'
-    }
-   
-   
-   
-    const cartaEliminada = baraja.pop()
-    console.log( baraja )
-    console.log( cartaEliminada )
 
 
 }
 
+crearDeck();
 
-sacarCartas();
 
+// Esta funcion me permitira tomar una carta
+
+const pedirCarta = () => {
+
+    if ( deck.length === 0){
+        throw 'No hay cartas en el deck!';
+    }
+
+    const carta = deck.pop();
+    
+    console.log( deck );
+    console.log( carta );
+    return carta;
+
+}
+
+
+// pedirCarta();
+
+// Esta funcion me dara el valor de la carta
 
 const valorCarta = ( carta ) => {
     
@@ -57,7 +65,27 @@ const valorCarta = ( carta ) => {
 }              
 
 
- const valor = valorCarta( sacarCartas() )
+ const valor = valorCarta( pedirCarta() )
  console.log({ valor })
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
