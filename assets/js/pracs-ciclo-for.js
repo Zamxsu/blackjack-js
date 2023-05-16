@@ -31,6 +31,9 @@ creandoBaraja();
 
 const sacarCartas = () => {
 
+    if( baraja.length === 0){
+        throw 'No hay mas Cartas en la baraja'
+    }
    
    
    
@@ -40,6 +43,7 @@ const sacarCartas = () => {
 
 
 }
+
 
 sacarCartas();
 
@@ -53,7 +57,7 @@ const valorCarta = ( carta ) => {
 }              
 
 
- const valor = valorCarta( pedirCarta() )
+ const valor = valorCarta( sacarCartas() )
  console.log({ valor })
 
 
