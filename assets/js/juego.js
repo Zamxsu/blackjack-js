@@ -70,7 +70,6 @@ const valorCarta = ( carta ) => {
 
 
 
- 
 
 
 
