@@ -95,6 +95,15 @@ btnPedir.addEventListener('click', () => {
 
     divCartasJugador.append( imgCarta )
 
+
+    if( puntosJugador > 21 ){
+        console.warn('Lo siento mucho, perdiste')
+        btnPedir.disable = true
+    } else if ( puntosJugador === 21 ){
+        console.warn('21, Genial!')
+        btnPedir.disable = true
+    }
+
 });
 
 
