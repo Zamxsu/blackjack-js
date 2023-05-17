@@ -70,6 +70,8 @@ const valorCarta = ( carta ) => {
 
 
 // Inicio nuevo tema 
+// Dom en Consola Google
+
 
 
 
