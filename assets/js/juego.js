@@ -14,6 +14,8 @@ let puntosJugador = 0,
 
 const btnPedir =  document.querySelector('#btnPedir');
 const puntaje =  document.querySelector('.puntos-jugador')
+const divCartasJugador = document.querySelector('#jugador-cartas')
+
 
 // Esta funcion crea una nueva baraja
 
@@ -86,9 +88,12 @@ btnPedir.addEventListener('click', () => {
 
     puntaje.innerText = puntosJugador;
 
+    const imgCarta = document.createElement('img')
 
+    imgCarta.src = `assets/cartas/${  carta   }.png`
+    imgCarta.classList.add('carta')
 
-
+    divCartasJugador.append( imgCarta )
 
 });
 
