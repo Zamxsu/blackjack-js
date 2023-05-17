@@ -69,7 +69,7 @@ const valorCarta = ( carta ) => {
  console.log({ valor })
 
 
-
+// Inicio nuevo tema 
 
 
 
