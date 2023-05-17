@@ -6,6 +6,14 @@ let deck     = [];
 const tipos  = ['C','D','H','S']
 const especiales = ['A','J','Q','K']
 
+let puntosJugador = 0,
+    puntosComputadora = 0;
+
+
+// Referencias del HTML
+
+const btnPedir =  document.querySelector('#btnPedir');
+const puntaje =  document.querySelector('.puntos-jugador')
 
 // Esta funcion crea una nueva baraja
 
@@ -45,8 +53,8 @@ const pedirCarta = () => {
 
     const carta = deck.pop();
     
-    console.log( deck );
-    console.log( carta );
+    // console.log( deck );
+    // console.log( carta );
     return carta;
 
 }
@@ -65,12 +73,27 @@ const valorCarta = ( carta ) => {
 }              
 
 
- const valor = valorCarta( pedirCarta() )
- console.log({ valor })
-
 
 // Inicio nuevo tema 
 // Dom en Consola Google
+// Creando ahora un evento click
+
+btnPedir.addEventListener('click', () => {
+
+    const carta = pedirCarta()
+
+    puntosJugador =  puntosJugador + valorCarta( carta );
+
+    puntaje.innerText = puntosJugador;
+
+
+
+
+
+});
+
+
+
 
 
 
