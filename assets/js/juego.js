@@ -187,6 +187,11 @@ btnNuevo.addEventListener('click', () => {
 
 
 
+// Automatizacion
+
+
+
+
 
 
 
