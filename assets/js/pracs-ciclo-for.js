@@ -6,6 +6,15 @@ let deck     = [];
 const tipos  = ['C','D','H','S']
 const especiales = ['A','J','Q','K']
 
+// Funciones de elementos HTML
+
+let puntosJugador = 0,
+    puntosComputadora = 0;
+
+
+const btnPedir =  document.querySelector('#btnPedir')
+const puntaje  = document.querySelector('.puntos-jugador')
+const divCartasJugador = document.querySelector('#jugador-cartas')
 
 // Esta funcion crea una nueva baraja
 
@@ -46,7 +55,7 @@ const pedirCarta = () => {
     const carta = deck.pop();
     
     console.log( deck );
-    console.log( carta );
+    // console.log( carta );
     return carta;
 
 }
@@ -66,9 +75,37 @@ const valorCarta = ( carta ) => {
 
 
  const valor = valorCarta( pedirCarta() )
- console.log({ valor })
+//  console.log({ valor })
 
 
+// Boton para pedir carta 
+
+btnPedir.addEventListener('click', () => {
+
+    const carta = pedirCarta()
+
+    puntosJugador =  puntosJugador + valorCarta( carta );
+
+    puntaje.innerText = puntosJugador;
+
+    const imgCarta = document.createElement('img')
+
+    imgCarta.src = `assets/cartas/${  carta   }.png`
+    imgCarta.classList.add('carta')
+
+    divCartasJugador.append( imgCarta )
+
+
+    if( puntosJugador > 21 ){
+        console.warn('Lo siento mucho, perdiste')
+        btnPedir.disable = true
+    } else if ( puntosJugador === 21 ){
+        console.warn('21, Genial!')
+        btnPedir.disable = true
+    }
+
+
+});
 
  
 
