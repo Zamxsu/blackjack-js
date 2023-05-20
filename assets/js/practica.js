@@ -28,3 +28,9 @@ const aquiCreamosElDeck = () => {
 }
 
 aquiCreamosElDeck();
+
+// Operador condicional ternario 
+
+let numero = 2;
+
+    ( numero > 10) ? 'Numero es mayor a 10' : '10 es mayor a numero!'
