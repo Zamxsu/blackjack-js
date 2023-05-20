@@ -34,3 +34,20 @@ aquiCreamosElDeck();
 let numero = 2;
 
     ( numero > 10) ? 'Numero es mayor a 10' : '10 es mayor a numero!'
+
+
+// Creando una funcion que te diga buenos dias
+
+
+const buenosDias =  () => {
+
+    if( numero >  1 ){
+        console.log( 'Buenos dias A todos')
+    } else {
+        console.log( 'Hoy nada es como antes!')
+    }
+
+
+}
+
+buenosDias();
