@@ -112,11 +112,6 @@
 
     // Creando la parte de la computadora! 
 
-    const acumularPuntos = () => {
-        
-    }
-
-
     const turnoDeComputadora = ( puntosMinimos ) => {
         do {
 
@@ -188,28 +183,9 @@
     })();
 
 
-
-
-
-
- 
-
-
-
-
-
-
-
-
-   
-
-
-
-
-
-
-
 // Automatizacion
+
+// Minify code 
 
 
 
